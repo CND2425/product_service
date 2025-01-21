@@ -1,4 +1,4 @@
-name: Deploy Images to GHCR
+name: FastAPI Docker Image Test, Build and Push to Github Registry
 on:
   push:
     branches:
@@ -26,6 +26,7 @@ jobs:
 
   docker-build:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
