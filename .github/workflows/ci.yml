@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          python pytest
+          pytest 
 
   docker-build:
     runs-on: ubuntu-latest
