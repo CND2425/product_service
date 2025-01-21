@@ -7,7 +7,13 @@
 annotated-types==0.7.0
     # via pydantic
 anyio==4.8.0
-    # via starlette
+    # via
+    #   httpx
+    #   starlette
+certifi==2024.12.14
+    # via
+    #   httpcore
+    #   httpx
 click==8.1.8
     # via uvicorn
 dnspython==2.7.0
@@ -19,13 +25,26 @@ email-validator==2.2.0
 fastapi==0.115.6
     # via -r requirements.in
 h11==0.14.0
-    # via uvicorn
+    # via
+    #   httpcore
+    #   uvicorn
+httpcore==1.0.7
+    # via httpx
+httpx==0.28.1
+    # via -r requirements.in
 idna==3.10
     # via
     #   anyio
     #   email-validator
+    #   httpx
+iniconfig==2.0.0
+    # via pytest
 motor==3.6.0
     # via -r requirements.in
+packaging==24.2
+    # via pytest
+pluggy==1.5.0
+    # via pytest
 pydantic[email]==2.10.5
     # via
     #   -r requirements.in
@@ -34,6 +53,12 @@ pydantic-core==2.27.2
     # via pydantic
 pymongo==4.9.2
     # via motor
+pytest==7.4.4
+    # via
+    #   -r requirements.in
+    #   pytest-asyncio
+pytest-asyncio==0.23.8
+    # via -r requirements.in
 sniffio==1.3.1
     # via anyio
 starlette==0.41.3

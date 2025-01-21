@@ -2,3 +2,6 @@ fastapi             ~=0.110
 motor               ~=3.3
 uvicorn             ~=0.28
 pydantic[email]
+pytest ~=7.4
+pytest-asyncio ~=0.21
+httpx ~=0.24

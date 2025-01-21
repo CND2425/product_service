@@ -13,10 +13,6 @@ from fastapi.responses import Response
 # Router erstellen
 router = APIRouter()
 
-@router.get("/")
-def read_root():
-    return {"message": "It's working!"}
-
 @router.post(
     "/products/",
     response_description="Add new product",
@@ -104,3 +100,10 @@ async def delete_product(id: str, db_adapter=Depends(get_db_adapter)):
         return Response(status_code=status.HTTP_204_NO_CONTENT)
 
     raise HTTPException(status_code=404, detail=f"Product {id} not found")
+
+@router.get("/")
+async def root():
+    """
+    Test-Endpunkt, um sicherzustellen, dass die API läuft.
+    """
+    return {"message": "Product Service is running"}
