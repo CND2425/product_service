@@ -15,10 +15,10 @@ app = FastAPI(
 # CORS-Middleware hinzufügen
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:8080"],  # Erlaube Anfragen von deinem Frontend
-    allow_credentials=True,  # Erlaube das Setzen von Cookies
-    allow_methods=["*"],  # Erlaube alle HTTP-Methoden (GET, POST, PUT, DELETE, etc.)
-    allow_headers=["*"],  # Erlaube alle Header
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+    allow_credentials=True,
 )
 
 # Routen registrieren
